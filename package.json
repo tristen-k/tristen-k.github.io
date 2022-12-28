@@ -1,6 +1,24 @@
 {
   "dependencies": {
-    "bootstrap": "^3.4.1",
+    "bootstrap": "^5.2.3",
     "sass": "^1.57.1"
-  }
+  },
+  "name": "raretrash.github.io",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raretrash/raretrash.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raretrash/raretrash.github.io/issues"
+  },
+  "homepage": "https://github.com/raretrash/raretrash.github.io#readme",
+  "description": ""
 }
