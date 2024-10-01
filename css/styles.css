@@ -1,0 +1,165 @@
+/* Define reusable color variables */
+:root {
+    --bg-beige: #f5f1e1;
+    --text-gray: #4b4b4b;
+    --accent-brown: #b68973;
+    --light-brown: #fefaf5;
+    --white: #fff;
+}
+
+/* Base page and font setup */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-beige);
+    color: var(--text-gray);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Greeting Section */
+.greeting {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--bg-beige);
+}
+
+.greeting__heading {
+    font-size: 3rem;
+    color: var(--text-gray);
+    margin: 0;
+}
+
+.greeting__text {
+    font-size: 1.5rem;
+    color: #737373;
+}
+
+/* Scroll down arrow styling */
+.scroll-down {
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--accent-brown);
+    margin-top: 40px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(10px); }
+    60% { transform: translateY(5px); }
+}
+
+/* Section styling */
+section {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: clamp(20px, 5vw, 80px); /* Dynamically adjusts padding */
+}
+
+#about,
+#values {
+    align-items: flex-start;
+    text-align: left;
+    padding: 0 10vw; /* Adds gap from edges */
+}
+
+/* Section Titles with underline */
+h2 {
+    color: var(--accent-brown);
+    font-size: 2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 3px;
+    background-color: var(--accent-brown);
+    border-radius: 2px;
+}
+
+/* Contact Section (centered text) */
+#contact {
+    background-color: var(--bg-beige);
+    text-align: center;
+    padding: 0 10vw;
+}
+
+#contact h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+p {
+    font-size: 1.2rem;
+    max-width: 800px;
+}
+
+/* Social Icon Styling */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-icons a {
+    font-size: 2.5rem;
+    color: var(--accent-brown);
+    transition: transform 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+    color: var(--text-gray);
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: var(--accent-brown);
+    color: var(--white);
+    text-align: center;
+}
+
+/* Add a fixed border around the viewport using pseudo-elements */
+body::before,
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    border: 10px solid var(--white);
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+
+    .social-icons a {
+        font-size: 2rem;
+    }
+}
