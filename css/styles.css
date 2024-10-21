@@ -100,7 +100,7 @@ body::before, body::after {
     display: inline-block;
 }
 
-.content-section h2::after {
+.content-section h2::after, #contact h2::after {
     content: '';
     position: absolute;
     bottom: -5px;
@@ -119,15 +119,13 @@ body::before, body::after {
     display: inline-block;
 }
 
-#contact h2::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 50px;
-    height: 2px;
-    background-color: var(--accent-brown);
+.content-section h3 {
+    font-size: clamp(1.6rem, 2.5vw, 2rem); /* Slightly smaller than h2 */
+    margin-top: 15px; /* Balanced spacing with content below */
+    display: inline-flex; /* Align icon and text horizontally */
+    align-items: center;
+    gap: 8px; /* Space between the icon and text */
+    position: relative; /* Align with h2's positioning */
 }
 
 /* Media Section: Grid Layout */
